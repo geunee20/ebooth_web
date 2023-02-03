@@ -3,18 +3,18 @@ import { useEffect } from "react";
 
 const App = () => {
   useEffect(() => {
-    // Load the environment variables
-    const app = new Realm.App({ id: "ebooth-gmknu" });
-    // Grab Tokens
+    const APP_ID = "ebooth-gmknu";
+    const app = new Realm.App({ id: APP_ID });
+    //Grab Tokens
     const params = new URLSearchParams(window.location.search);
     const token = params.get("token");
     const tokenId = params.get("tokenId");
-    // Confirm client
+    //Confirm client
     app.emailPasswordAuth
       .confirmUser({ token, tokenId })
       .then(() => displayResult("success"))
       .catch((err) => displayResult("error", err));
-    // Display Message depending on result
+    //Display Message depending on result
     function displayResult(result, err) {
       const message = document.getElementById("message");
       if (result === "success") {
