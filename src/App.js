@@ -3,8 +3,8 @@ import { useEffect } from "react";
 
 const App = () => {
   useEffect(() => {
-    const APP_ID = "ebooth-gmknu";
-    const app = new Realm.App({ id: APP_ID });
+    // const APP_ID = "ebooth-gmknu";
+    const app = new Realm.App({ id: process.env.NODE_APP_ID });
     //Grab Tokens
     const params = new URLSearchParams(window.location.search);
     const token = params.get("token");
