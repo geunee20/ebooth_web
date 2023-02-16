@@ -1,42 +1,19 @@
 import * as Realm from "realm-web";
 import { useEffect } from "react";
+import HomeScreen from "../pages/home";
+import PasswordResetPage from "../pages/password_reset";
+import EmailConfirmationPage from "../pages/email_confirmation";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
-  useEffect(() => {
-    const app = new Realm.App({ id: process.env.REACT_APP_ID });
-    //Grab Tokens
-    const params = new URLSearchParams(window.location.search);
-    const token = params.get("token");
-    const tokenId = params.get("tokenId");
-    //Confirm client
-    app.emailPasswordAuth
-      .confirmUser({ token, tokenId })
-      .then(() => displayResult("success"))
-      .catch((err) => displayResult("error", err));
-    //Display Message depending on result
-    function displayResult(result, err) {
-      const message = document.getElementById("message");
-      if (result === "success") {
-        message.innerText =
-          "Your E-mail address has been verified.\n\n You may close this page. Thank you.";
-      } else if (result === "error") {
-        message.innerText =
-          "Unable to register this user. Please try again to register." + err;
-      }
-    }
-  }, []);
-
   return (
-    <>
-      <div>
-        <h1 style={{ textAlign: "center" }}>eBooth</h1>
-        <h3 style={{ textAlign: "center" }}>Email Verification</h3>
-        <p
-          id="message"
-          style={{ textAlign: "center", backgroundColor: "whitesmoke" }}
-        ></p>
-      </div>
-    </>
+    <Router>
+      <Routes>
+        <Route exact path="/" exact element={<Home />} />
+        <Route path="/email_confirmation" element={<EmailConfirmationPage />} />
+        <Route path="/password_reset" element={<PasswordResetPage />} />
+      </Routes>
+    </Router>
   );
 };
 
