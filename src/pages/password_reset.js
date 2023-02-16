@@ -1,7 +1,7 @@
 import * as Realm from "realm-web";
 import React, { useState } from "react";
 
-const PasswordResetScreen = () => {
+const PasswordResetPage = () => {
   const app = new Realm.App({ id: process.env.REACT_APP_ID });
   const params = new URLSearchParams(window.location.search);
   const token = params.get("token");
@@ -153,4 +153,4 @@ const PasswordResetScreen = () => {
   );
 };
 
-export default PasswordResetScreen;
+export default PasswordResetPage;
