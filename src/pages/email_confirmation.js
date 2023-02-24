@@ -28,14 +28,17 @@ const EmailConfirmationScreen = () => {
 
   return (
     <>
-        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-          <h1 style={{ textAlign: "center" }}>eBooth</h1>
-          <h3 style={{ textAlign: "center" }}>Email Verification</h3>
-          <p
-            id="message"
-            style={{ textAlign: "center", }}
-          ></p>
-        </div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <h1 style={{ textAlign: "center" }}>eBooth</h1>
+        <h3 style={{ textAlign: "center" }}>Email Verification</h3>
+        <p id="message" style={{ textAlign: "center" }}></p>
+      </div>
     </>
   );
 };
