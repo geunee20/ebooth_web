@@ -1,7 +1,7 @@
 import * as Realm from "realm-web";
 import React, { useState } from "react";
-import styles from './styles.css';
-
+import styles from "./styles.css";
+import { Eye, EyeWithLine } from "@styled-icons/entypo";
 
 const PasswordResetPage = () => {
   const app = new Realm.App({ id: process.env.REACT_APP_ID });
@@ -36,8 +36,8 @@ const PasswordResetPage = () => {
 
   const handleTogglePassword = () => {
     setShowPassword(!showPassword);
-  }
-  
+  };
+
   const handleClick = () => {
     if (
       lowercase &&
@@ -71,14 +71,20 @@ const PasswordResetPage = () => {
       <h1 style={{ textAlign: "center" }}>eBooth</h1>
       <div id="newPasswordContainer">
         <p id="title">New password:</p>
-        <div style={{ width: "2%" }}></div>
+        <div style={{ width: "2%" }} />
         <input
-          type="password"
+          type={showPassword ? "text" : "password"}
           id="newPassword"
           name="newPassword"
           value={newPassword}
           onChange={handlePasswordChange}
         />
+        <div style={{ width: "1%" }} />
+        {showPassword ? (
+          <Eye size={20} onClick={handleTogglePassword} />
+        ) : (
+          <EyeWithLine size={20} onClick={handleTogglePassword} />
+        )}
       </div>
       <div
         style={{
@@ -88,31 +94,31 @@ const PasswordResetPage = () => {
           alignItems: "center",
         }}
       >
-        <div id="validationContainer" style={{fontSize: 12}}>
+        <div id="validationContainer" style={{ fontSize: 12 }}>
           {lowercase ? (
             <p class="valid">Lower case</p>
           ) : (
             <p class="invalid">Lower case</p>
           )}
         </div>
-        <div id="validationContainer" style={{fontSize: 12}}>
+        <div id="validationContainer" style={{ fontSize: 12 }}>
           {uppercase ? (
             <p class="valid">Upper case</p>
           ) : (
             <p class="invalid">Upper case</p>
           )}
         </div>
-        <div id="validationContainer" style={{fontSize: 12}}>
+        <div id="validationContainer" style={{ fontSize: 12 }}>
           {special ? (
             <p class="valid">Special ( !@#%& )</p>
           ) : (
             <p class="invalid">Special ( !@#%& )</p>
           )}
         </div>
-        <div id="validationContainer" style={{fontSize: 12}}>
+        <div id="validationContainer" style={{ fontSize: 12 }}>
           {number ? <p class="valid">Number</p> : <p class="invalid">Number</p>}
         </div>
-        <div id="validationContainer" style={{fontSize: 12}}>
+        <div id="validationContainer" style={{ fontSize: 12 }}>
           {numLetter ? (
             <p class="valid">6 ~ 16 letters</p>
           ) : (
@@ -139,7 +145,7 @@ const PasswordResetPage = () => {
           marginBottom: "2%",
         }}
       >
-        <div id="validationContainer" style={{fontSize: 12}}>
+        <div id="validationContainer" style={{ fontSize: 12 }}>
           {newPassword === confirmPassword &&
           lowercase &&
           uppercase &&

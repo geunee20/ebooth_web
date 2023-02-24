@@ -6,15 +6,7 @@ const HomeScreen = () => {
     <div
       style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
-      <div>
-        <img
-          src={require("../assets/logo.png")}
-          style={{
-            width: "150px",
-            height: "150px",
-          }}
-        />
-      </div>
+      <img src={require("../assets/logo.png")} alt={""} />
       <div>
         <home_title>Welcome to eBooth</home_title>
         <home_body>@official.eBooth</home_body>
