@@ -1,6 +1,6 @@
 import * as Realm from "realm-web";
 import React, { useState } from "react";
-import styles from "./styles.css";
+import "./styles.css";
 import { Eye, EyeWithLine } from "@styled-icons/entypo";
 
 const PasswordResetPage = () => {
