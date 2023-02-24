@@ -1,5 +1,7 @@
 import * as Realm from "realm-web";
 import React, { useState } from "react";
+import styles from './styles.css';
+
 
 const PasswordResetPage = () => {
   const app = new Realm.App({ id: process.env.REACT_APP_ID });
@@ -21,6 +23,7 @@ const PasswordResetPage = () => {
   const [number, setNumber] = useState(false);
   const [special, setSpecial] = useState(false);
   const [numLetter, setNumLetter] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   function handlePasswordChange(event) {
     setNewPassword(event.target.value);
@@ -31,6 +34,10 @@ const PasswordResetPage = () => {
     setNumLetter(numLetterPattern.test(event.target.value));
   }
 
+  const handleTogglePassword = () => {
+    setShowPassword(!showPassword);
+  }
+  
   const handleClick = () => {
     if (
       lowercase &&
@@ -81,25 +88,31 @@ const PasswordResetPage = () => {
           alignItems: "center",
         }}
       >
-        <div id="validationContainer">
+        <div id="validationContainer" style={{fontSize: 12}}>
           {lowercase ? (
             <p class="valid">Lower case</p>
           ) : (
             <p class="invalid">Lower case</p>
           )}
+        </div>
+        <div id="validationContainer" style={{fontSize: 12}}>
           {uppercase ? (
             <p class="valid">Upper case</p>
           ) : (
             <p class="invalid">Upper case</p>
           )}
+        </div>
+        <div id="validationContainer" style={{fontSize: 12}}>
           {special ? (
             <p class="valid">Special ( !@#%& )</p>
           ) : (
             <p class="invalid">Special ( !@#%& )</p>
           )}
         </div>
-        <div id="validationContainer">
+        <div id="validationContainer" style={{fontSize: 12}}>
           {number ? <p class="valid">Number</p> : <p class="invalid">Number</p>}
+        </div>
+        <div id="validationContainer" style={{fontSize: 12}}>
           {numLetter ? (
             <p class="valid">6 ~ 16 letters</p>
           ) : (
@@ -126,7 +139,7 @@ const PasswordResetPage = () => {
           marginBottom: "2%",
         }}
       >
-        <div id="validationContainer">
+        <div id="validationContainer" style={{fontSize: 12}}>
           {newPassword === confirmPassword &&
           lowercase &&
           uppercase &&
