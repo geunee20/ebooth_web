@@ -103,6 +103,8 @@ img {
 }
 
 .list-group-item {
+  margin-inline: auto;
+  width: min(450px, 80vw);
   font-family: "Montserrat";
   font-weight: bold;
 }
