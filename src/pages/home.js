@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./styles.css";
 import Wave from "react-wavify";
 import Typewriter from "typewriter-effect";
-import { UserState } from "realm-web";
 import { Link } from "react-router-dom";
 
 const HomeScreen = () => {
