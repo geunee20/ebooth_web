@@ -65,11 +65,11 @@ const HomeScreen = () => {
             />
           </a>
         </div>
-        <div class="list_container">
-          <p class="list_title" onClick={() => setList1(!list1)}>
-            Perks for event seekers:
-          </p>
-          {list1 && (
+        <p class="list_title" onClick={() => setList1(!list1)}>
+          Perks for event seekers:
+        </p>
+        {list1 && (
+          <div className="list_container">
             <ul class="list-group">
               <li class="list-group-item">
                 Easy access to information on a wide range of school events in
@@ -92,11 +92,13 @@ const HomeScreen = () => {
                 their interests and location
               </li>
             </ul>
-          )}
-          <p class="list_title" onClick={() => setList2(!list2)}>
-            Perks for event promoters:
-          </p>
-          {list2 && (
+          </div>
+        )}
+        <p class="list_title" onClick={() => setList2(!list2)}>
+          Perks for event promoters:
+        </p>
+        {list2 && (
+          <div className="list_container">
             <ul class="list-group">
               <li class="list-group-item">
                 Ability to create and post event information including location,
@@ -119,8 +121,8 @@ const HomeScreen = () => {
                 following for future events.
               </li>
             </ul>
-          )}
-        </div>
+          </div>
+        )}
       </div>
       <div className="copyright_container">
         <p className="copyright_text">
