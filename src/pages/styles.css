@@ -75,7 +75,7 @@ img {
   border: none;
   border-bottom: black;
   text-align: left;
-  font-size: min(2rem, 7vw);
+  font-size: min(2rem, 6vw);
   border-bottom: 2px solid black;
   font-family: "Montserrat";
   font-weight: bold;
