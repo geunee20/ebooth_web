@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./styles.css";
 import Wave from "react-wavify";
 import Typewriter from "typewriter-effect";
@@ -7,6 +7,12 @@ import { Link } from "react-router-dom";
 const HomeScreen = () => {
   const [list1, setList1] = useState(false);
   const [list2, setList2] = useState(false);
+
+  const AlwaysScrollToBottom = () => {
+    const elementRef = useRef();
+    useEffect(() => elementRef.current.scrollIntoView({ behavior: "smooth" }));
+    return <div ref={elementRef} />;
+  };
 
   return (
     <div>
@@ -92,6 +98,7 @@ const HomeScreen = () => {
                 their interests and location
               </li>
             </ul>
+            <AlwaysScrollToBottom />
           </div>
         )}
         <p class="list_title" onClick={() => setList2(!list2)}>
@@ -121,6 +128,7 @@ const HomeScreen = () => {
                 following for future events.
               </li>
             </ul>
+            <AlwaysScrollToBottom />
           </div>
         )}
       </div>
