@@ -1,33 +1,36 @@
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap);
 
-.wrapper {
-  overflow-x: hidden;
-  overflow-y: scroll;
-  height: 100vh;
-  width: 100vw;
+#logo {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  margin-top: 5vh;
+  width: 5vh;
+  height: 5vh;
 }
 
 .title_container {
-  height: 5vh;
-  width: 70vw;
-  margin-left: 15vw;
+  height: min(100px, 5vh);
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .home_title {
   text-align: center;
   margin: 0 auto;
-  font-size: 10vw;
+  font-size: min(5em, 10vw);
   font-weight: bold;
   font-family: "Anonymous Pro", monospace;
   display: inline;
 }
 
 .cursorSize {
-  font-size: 9vw;
+  font-size: min(5em, 9vw);
   animation: blinkTextCursor 1000ms ease-in-out alternate infinite;
 }
 
@@ -41,35 +44,38 @@
 }
 
 .home_detail {
-  width: 80vw;
-  margin-left: 10vw;
+  width: min(500px, 80vw);
+  margin-inline: auto;
   font-size: large;
   font-family: "Montserrat";
   font-weight: bold;
 }
 
-#logo {
+.download_container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  width: min(500px, 90vw);
+  margin-inline: auto;
 }
 
-img {
-  margin-top: 5vh;
-  width: 5vh;
-  height: 5vh;
+.download_button {
+  margin-top: 0;
+  width: min(200px, 40vw);
+  height: min(100px, 5vh);
 }
 
 .list_container {
-  margin-left: 5vw;
-  width: 90vw;
+  margin-inline: auto;
+  width: min(500px, 90vw);
 }
 
 .list_title {
-  width: 90vw;
+  width: min(500px, 90vw);
   border: none;
   border-bottom: black;
   text-align: left;
-  font-size: 7vw;
+  font-size: min(2rem, 7vw);
   border-bottom: 2px solid black;
   font-family: "Montserrat";
   font-weight: bold;
@@ -99,18 +105,6 @@ body {
   height: 50vh;
   z-index: -1;
   opacity: 0.1;
-}
-
-.download_container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.download_button {
-  margin-top: 0;
-  width: 40vw;
-  height: 5vh;
 }
 
 .copyright_container {

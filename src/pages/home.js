@@ -10,7 +10,13 @@ const HomeScreen = () => {
 
   return (
     <div>
-      <div style={{ height: "92vh", overflowX: "hidden", overflowY: "scroll" }}>
+      <div
+        style={{
+          height: "92vh",
+          overflowX: "hidden",
+          overflowY: "scroll",
+        }}
+      >
         <Wave
           className="wave"
           fill="#003057"
