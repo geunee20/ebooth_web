@@ -86,7 +86,6 @@ img {
 .list-group {
   margin-inline: auto;
   width: min(500px, 90vw);
-  margin-top: 0;
   list-style-position: outside;
   animation: 1.5s alternate slide-down;
 }
@@ -104,6 +103,7 @@ img {
 
 .list-group-item {
   margin-inline: auto;
+  margin-top: 1vh;
   width: min(450px, 80vw);
   font-family: "Montserrat";
   font-weight: bold;
