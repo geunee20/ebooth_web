@@ -56,7 +56,7 @@ const HomeScreen = () => {
           participate in school events.
         </p>
         <div class="download_container">
-          <a href="https://ebooth.netlify.app">
+          <a href="https://apps.apple.com/app/ebooth-find-boost-your-event/id6445867014">
             <img
               class="download_button"
               src={require("../assets/appstore.png")}
@@ -143,6 +143,10 @@ const HomeScreen = () => {
             width: "100%",
           }}
         >
+          <Link className="link" to="/terms-of-use">
+            Terms of use
+          </Link>
+          {"  "} | {"  "}
           <Link className="link" to="/privacy-policy">
             privacy policy
           </Link>
