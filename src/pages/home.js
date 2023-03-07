@@ -63,7 +63,7 @@ const HomeScreen = () => {
               alt={""}
             />
           </a>
-          <a href="https://ebooth.netlify.app">
+          <a href="https://play.google.com/store/apps/details?id=com.ebooth&pli=1">
             <img
               class="download_button"
               src={require("../assets/playstore.png")}
