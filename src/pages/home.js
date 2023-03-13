@@ -131,7 +131,13 @@ const HomeScreen = () => {
             <AlwaysScrollToBottom />
           </div>
         )}
+        <div className="event_title">
+          <Link className="event_title" to="/event">
+            Go to Event ►
+          </Link>
+        </div>
       </div>
+
       <div className="copyright_container">
         <p className="copyright_text">
           &copy; 2023 eBooth | All Rights Reserved

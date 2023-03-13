@@ -109,6 +109,23 @@ img {
   font-weight: bold;
 }
 
+.event_title {
+  margin-inline: auto;
+  width: min(230px, 45vw);
+  border: none;
+  border-bottom: black;
+  text-align: left;
+  font-size: min(2rem, 6vw);
+  border-bottom: 2px solid black;
+  font-family: "Montserrat";
+  font-weight: bold;
+  color: black;
+  margin-top: 5vh;
+  margin-bottom: 0;
+  text-decoration: none;
+  color: black;
+}
+
 body {
   background-color: #eaa000;
 }
@@ -184,4 +201,12 @@ input {
 
 .invalid {
   color: red;
+}
+
+.img_event {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: min(450px, 100vw);
+  height: 100%;
 }
